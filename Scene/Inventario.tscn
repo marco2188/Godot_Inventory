@@ -1,0 +1,87 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Script/Inventario.gd" type="Script" id=1]
+[ext_resource path="res://Scene/drop_ogg.tscn" type="PackedScene" id=2]
+
+[node name="Inventario" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Back_Panel" type="ColorRect" parent="."]
+margin_top = 490.0
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Panel" type="ColorRect" parent="Back_Panel"]
+margin_left = 267.0
+margin_top = 10.0
+margin_right = 757.0
+margin_bottom = 100.0
+color = Color( 0.231373, 0.231373, 0.231373, 1 )
+
+[node name="ColorRect" type="ColorRect" parent="Back_Panel/Panel"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 80.0
+margin_bottom = 80.0
+color = Color( 0.517647, 0.517647, 0.517647, 1 )
+
+[node name="ColorRect2" type="ColorRect" parent="Back_Panel/Panel"]
+margin_left = 90.0
+margin_top = 10.0
+margin_right = 160.0
+margin_bottom = 80.0
+color = Color( 0.517647, 0.517647, 0.517647, 1 )
+
+[node name="ColorRect3" type="ColorRect" parent="Back_Panel/Panel"]
+margin_left = 170.0
+margin_top = 10.0
+margin_right = 240.0
+margin_bottom = 80.0
+color = Color( 0.517647, 0.517647, 0.517647, 1 )
+
+[node name="ColorRect4" type="ColorRect" parent="Back_Panel/Panel"]
+margin_left = 250.0
+margin_top = 10.0
+margin_right = 320.0
+margin_bottom = 80.0
+color = Color( 0.517647, 0.517647, 0.517647, 1 )
+
+[node name="ColorRect5" type="ColorRect" parent="Back_Panel/Panel"]
+margin_left = 330.0
+margin_top = 10.0
+margin_right = 400.0
+margin_bottom = 80.0
+color = Color( 0.517647, 0.517647, 0.517647, 1 )
+
+[node name="ColorRect6" type="ColorRect" parent="Back_Panel/Panel"]
+margin_left = 410.0
+margin_top = 10.0
+margin_right = 480.0
+margin_bottom = 80.0
+color = Color( 0.517647, 0.517647, 0.517647, 1 )
+
+[node name="drop_ogg" parent="." instance=ExtResource( 2 )]
+position = Vector2( 328.6, 159.778 )
+index_ = 2
+
+[node name="drop_ogg2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 777.88, 131.385 )
+
+[node name="drop_ogg3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 545.724, 285.042 )
+index_ = 3
+
+[node name="obj_list" type="Node" parent="."]
+
+[node name="Button" type="Button" parent="."]
+margin_left = 39.0
+margin_top = 30.0
+margin_right = 135.0
+margin_bottom = 68.0
+text = "SAVE"
+
+[connection signal="drop_ogg" from="drop_ogg" to="." method="add_obj"]
+[connection signal="drop_ogg" from="drop_ogg2" to="." method="add_obj"]
+[connection signal="drop_ogg" from="drop_ogg3" to="." method="add_obj"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

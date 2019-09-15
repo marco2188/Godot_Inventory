@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Script/drop_ogg.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[node name="drop_ogg" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+index_ = 1
+
+[node name="Sprite" type="TextureRect" parent="."]
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+texture = ExtResource( 2 )
+
+[connection signal="mouse_entered" from="Sprite" to="." method="_on_Sprite_mouse_entered"]
+[connection signal="mouse_exited" from="Sprite" to="." method="_on_Sprite_mouse_exited"]

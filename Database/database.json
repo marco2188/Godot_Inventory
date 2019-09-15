@@ -1,0 +1,17 @@
+{
+	"1" :  {
+		"name" : "oggetto 1",
+		"icon" : "res://icon/og1.png",
+		"description" : "Questo è oggetto 1"
+		},
+	"2" :  {
+		"name" : "oggetto 2",
+		"icon" : "res://icon/og2.png",
+		"description" : "Questo è oggetto 2"
+		},
+	"3" :  {
+		"name" : "oggetto 3",
+		"icon" : "res://icon/og3.png",
+		"description" : "Questo è una oggetto 3"
+		}
+}
